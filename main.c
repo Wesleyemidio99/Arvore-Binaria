@@ -34,7 +34,7 @@ void inserir(Arvore **no,char letra){
         (*no) -> info = letra;
     }
     else{
-        if(letra < (*no) -> esquerda){
+        if(letra < (*no) -> info){
             inserir(&(*no) ->esquerda,letra);
         }
         else{
@@ -54,19 +54,38 @@ void imprimir(Arvore * pA){
     }
 }
 
+int altura(Arvore * PA){
+    if(PA == NULL){
+       return -1;
+    }
+    else{
+        int esq = altura(PA->esquerda);
+        int dir = altura(PA->direita);
+        if(esq > dir){
+            return esq ;
+        }
+        else{
+            return dir +1;
+        }
+
+    }
+}
 
 int main() {
     Arvore *A = inicializarArvore();
 
-    inserir(&A, 'a');
-    inserir(&A, 'b');
     inserir(&A, 'c');
+    inserir(&A, 'b');
     inserir(&A, 'd');
+    inserir(&A, 'a');
     inserir(&A, 'e');
+    inserir(&A, 'f');
+
 
 
     printf("Arvore Binaria\n\n");
     imprimir(A);
+    printf("\nAltura da Arvore = %d",altura(A));
 
     /*Arvore * D = criar('d',inicializarArvore(),inicializarArvore());
     Arvore * E = criar('e',inicializarArvore(),inicializarArvore());
