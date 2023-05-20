@@ -1,3 +1,14 @@
 # ninja log v5
 1	154	7062926596053879	CMakeFiles/untitled.dir/main.c.obj	1ecb484163fa4d52
 156	342	7062926597906717	untitled.exe	be8f472a4dd9f571
+2	74	7063000694904925	CMakeFiles/untitled.dir/main.c.obj	1ecb484163fa4d52
+2	63	7063000889169494	CMakeFiles/untitled.dir/main.c.obj	1ecb484163fa4d52
+63	138	7063000889887527	untitled.exe	be8f472a4dd9f571
+1	71	7063001760601983	CMakeFiles/untitled.dir/main.c.obj	1ecb484163fa4d52
+72	161	7063001761469602	untitled.exe	be8f472a4dd9f571
+1	61	7063001985666442	CMakeFiles/untitled.dir/main.c.obj	1ecb484163fa4d52
+61	139	7063001986404462	untitled.exe	be8f472a4dd9f571
+1	64	7063002339448447	CMakeFiles/untitled.dir/main.c.obj	1ecb484163fa4d52
+65	141	7063002340186772	untitled.exe	be8f472a4dd9f571
+1	67	7063002405970608	CMakeFiles/untitled.dir/main.c.obj	1ecb484163fa4d52
+68	143	7063002406689005	untitled.exe	be8f472a4dd9f571

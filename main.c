@@ -29,9 +29,9 @@ Arvore * criar(char info,Arvore * SAE, Arvore * SAD){
 void inserir(Arvore **no,char letra){
     if(*no == NULL){
         *no =(Arvore *) malloc(sizeof(Arvore));
-        *no->esquerda = inicializarArvore();
-        *no -> direitra = inicializarArvore();
-        *no -> info = letra;
+        (*no) ->esquerda = inicializarArvore();
+        (*no) -> direita = inicializarArvore();
+        (*no) -> info = letra;
     }
     else{
         if(letra < (*no) -> esquerda){
@@ -42,11 +42,32 @@ void inserir(Arvore **no,char letra){
         }
     }
 }
+bool vazia(Arvore * PA){
+    return PA == NULL;
+}
+
+void imprimir(Arvore * pA){
+    if(!vazia(pA)){
+        printf("%c ", pA->info);
+        imprimir(pA->esquerda);
+        imprimir(pA->direita);
+    }
+}
+
 
 int main() {
-    Arvore * A = inicializarArvore();
+    Arvore *A = inicializarArvore();
 
-    inserir(&A,'c');
+    inserir(&A, 'a');
+    inserir(&A, 'b');
+    inserir(&A, 'c');
+    inserir(&A, 'd');
+    inserir(&A, 'e');
+
+
+    printf("Arvore Binaria\n\n");
+    imprimir(A);
+
     /*Arvore * D = criar('d',inicializarArvore(),inicializarArvore());
     Arvore * E = criar('e',inicializarArvore(),inicializarArvore());
     Arvore * F = criar('f',inicializarArvore(),inicializarArvore());
