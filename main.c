@@ -62,7 +62,7 @@ int altura(Arvore * PA){
         int esq = altura(PA->esquerda);
         int dir = altura(PA->direita);
         if(esq > dir){
-            return esq ;
+            return esq +1 ;
         }
         else{
             return dir +1;
@@ -79,7 +79,6 @@ int main() {
     inserir(&A, 'd');
     inserir(&A, 'a');
     inserir(&A, 'e');
-    inserir(&A, 'f');
 
 
 
